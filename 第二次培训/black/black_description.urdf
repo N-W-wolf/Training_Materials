@@ -1,15 +1,6 @@
 <?xml version="1.0"?>
 <robot name="GO 2026_4_12">
 
-  <link name="base">
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
-      <geometry>
-        <box size="0.001 0.001 0.001" />
-      </geometry>
-    </visual>
-  </link>
-
   <link name="trunk">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
@@ -508,12 +499,6 @@
       <inertia ixx="0.000016" ixy="0" ixz="0" iyy="0.000016" iyz="0" izz="0.000016" />
     </inertial>
   </link>
-
-  <joint name="floating_base" type="fixed">
-    <parent link="base" />
-    <child link="trunk" />
-    <origin xyz="0 0 0" rpy="0 0 0" />
-  </joint>
 
   <joint name="imu_joint" type="fixed">
     <parent link="trunk" />
